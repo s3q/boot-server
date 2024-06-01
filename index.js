@@ -21,7 +21,7 @@ serverWebSocket.on("connection", (socket) => {
   webSocket = socket;
 });
 
-app.listen(8080, () => {
+app.listen( process.env.PORT || 8080, () => {
   console.log("Express server listening on port 8080");
 });
 
@@ -193,9 +193,9 @@ app.get("/command", async (req, res) => {
   });
 });
 
-const PORT = 27015;
-server.listen(PORT, () => {
-  console.log(`Node.js server listening on port ${PORT}`);
+const SPORT = 27015;
+server.listen(SPORT, () => {
+  console.log(`Node.js server listening on port ${SPORT}`);
 });
 
 server.on("error", (error) => {
